@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <mata charset="UTF-8">
+    <title>ビンゴ</title>
+</head>
+
+<body>
+<center>
+<h1>ビンゴ</h1>
+
+<p style="font-size: 100px;">{{ selected_number }}</p>
+
+<form action="/" method="post">
+    <button type="submit">抽選</button>
+</form>
+</center>
+
+<h3>抽選履歴</h3>
+<ul>
+    {% for result in past_results %}
+    <li>{{ result }}</li>
+    {% endfor %}
+</ul>
+</body>
+
