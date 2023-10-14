@@ -10,12 +10,12 @@ def bingo():
         
         bingo_numbers = list(range(1, 76))
         
-        # 抽選した番号をリストから削除
+        # 抽選した番号をリストから削除する
         for result in past_results:
             if result in bingo_numbers:
                 bingo_numbers.remove(result)
         
-        # 抽選結果を履歴に追加
+        # 抽選結果を履歴に追加する
         selected_number = random.choice(bingo_numbers)
         past_results.append(selected_number)
 
