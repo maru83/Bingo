@@ -4,6 +4,7 @@
 <head>
     <mata charset="UTF-8">
     <title>ビンゴ</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
@@ -17,9 +18,11 @@
 </form>
 </center>
 
+<br>
+
 <h3>抽選履歴</h3>
 <ul>
-    {% for result in past_results %}
+    {% for result in past_numbers %}
     <li>{{ result }}</li>
     {% endfor %}
 </ul>
